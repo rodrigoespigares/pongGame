@@ -1,9 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 :root{
     --primary:#2C3E4F;
 }
-
 body{
-    box-sizing: border-box;
     background-color: var(--primary);
     display: flex;
     flex-direction: column;
@@ -14,19 +13,46 @@ body{
     margin: 0;
 }
 main{
-    width: 80%;
     flex-grow: 1;
+    width: 100%;
+}
+#index{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    font-family: "Press Start 2P";
+    color: white;
+}
+#index button{
+    margin-top: 3rem;
+    font-family: "Press Start 2P";
+    padding: 2rem;
+    font-size: large;
+}
+#game{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 95vh;
 }
 svg{
-    margin: 5rem 0rem;
     border: 1px solid white;
-    width: 500px;
-    height: 80%;
+    width: 70%;
+    height: 90%;
+}
+#p1, #p2{
+    width: 20px;
+    height: 100px;
+    fill: white;
 }
 footer{
     background-color: var(--primary);
     width: 100%;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 2vh;
+    padding-bottom: .4vh;
     color: white;
 }

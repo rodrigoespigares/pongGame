@@ -1,18 +1,22 @@
-let px = 50;
-let vx = 10;
-
 function moveBall() {
     let ball = document.getElementById("ball");
     let container = document.getElementById("svg");
-    if ((parseInt(ball.getAttribute("cx")) - 30) > 0 && (parseInt(ball.getAttribute("cx")) + 30)<500) {
+    if ((parseInt(ball.getAttribute("cx"))-20)>0 && (parseInt(ball.getAttribute("cx")) + 20)<container.clientWidth) {
         reloadPos();
     } else {
-        vx = -1 * vx;
+        ballConfig.velX = -1 * ballConfig.velX;
+        reloadPos();
+    }
+    if ((parseInt(ball.getAttribute("cy"))-20)>0 && (parseInt(ball.getAttribute("cy")) + 20)<container.clientHeight) {
+        reloadPos();
+    } else {
+        ballConfig.velY = -1 * ballConfig.velY;
         reloadPos();
     }
 }
-
 function reloadPos() {
-    px = parseInt(ball.getAttribute("cx"));
-    ball.setAttribute("cx", px + vx);
+        ballConfig.px = parseInt(ball.getAttribute("cx"));
+        ball.setAttribute("cx", ballConfig.px + ballConfig.velX);
+        ballConfig.py = parseInt(ball.getAttribute("cy"));
+        ball.setAttribute("cy", ballConfig.py + ballConfig.velY);
 }
