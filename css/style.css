@@ -2,6 +2,9 @@
 :root{
     --primary:#2C3E4F;
 }
+*{
+    font-family: "Press Start 2P";
+}
 body{
     background-color: var(--primary);
     display: flex;
@@ -22,12 +25,11 @@ main{
     flex-direction: column;
     align-items: center;
     height: 90vh;
-    font-family: "Press Start 2P";
+
     color: white;
 }
 #index button{
     margin-top: 3rem;
-    font-family: "Press Start 2P";
     padding: 2rem;
     font-size: large;
 }
@@ -35,7 +37,9 @@ main{
     display: none;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 95vh;
+    color: white;
 }
 svg{
     border: 1px solid white;
@@ -48,6 +52,7 @@ svg{
     fill: white;
 }
 footer{
+    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--primary);
     width: 100%;
     text-align: center;
