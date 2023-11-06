@@ -35,7 +35,6 @@ main{
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: red;
     height: 95vh;
 }
 svg{
