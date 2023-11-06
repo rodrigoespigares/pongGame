@@ -1,0 +1,32 @@
+:root{
+    --primary:#2C3E4F;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+main{
+    width: 80%;
+    flex-grow: 1;
+}
+svg{
+    margin: 5rem 0rem;
+    border: 1px solid white;
+    width: 500px;
+    height: 80%;
+}
+footer{
+    background-color: var(--primary);
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    color: white;
+}
