@@ -13,7 +13,7 @@ function config(){
     }
     ballConfig={
         velY : 1,
-        velX : 3,
+        velX : 1,
         px : 50,
         py : 50,
     }
