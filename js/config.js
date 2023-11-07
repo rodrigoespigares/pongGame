@@ -22,10 +22,10 @@ function config(){
     game.line.setAttribute("x", (game.svg.clientWidth/2))
     game.player1.setAttribute("y", (game.svg.clientHeight/2.5));
     game.player1.setAttribute("x", 60);
-    game.g1.setAttribute("y", (game.svg.clientHeight/3));
+    game.g1.setAttribute("y", (game.svg.clientHeight/3.7));
     game.player2.setAttribute("y", (game.svg.clientHeight/2.5));
     game.player2.setAttribute("x", (game.svg.clientWidth-80));
-    game.g2.setAttribute("y", (game.svg.clientHeight/3));
+    game.g2.setAttribute("y", (game.svg.clientHeight/3.7));
     game.g2.setAttribute("x", (game.svg.clientWidth)-10);
     game.ball.setAttribute("cy", (game.svg.clientHeight/2.5));
     game.ball.setAttribute("cx", (game.svg.clientWidth/2));

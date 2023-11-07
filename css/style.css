@@ -53,7 +53,7 @@ svg{
 }
 #g1, #g2{
     width: 10px;
-    height: 200px;
+    height: 300px;
     fill: red;
 }
 #c1,#c2, #line, #mid{
@@ -62,6 +62,27 @@ svg{
 }
 #mid{
     transform: rotateX('90');
+}
+#alert{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 80%;
+    position: absolute;
+}
+#alert button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+#alert button img{
+    width: 30px;
+    height: 30px;
 }
 footer{
     font-family: Arial, Helvetica, sans-serif;
