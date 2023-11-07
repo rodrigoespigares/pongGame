@@ -44,12 +44,24 @@ main{
 svg{
     border: 1px solid white;
     width: 70%;
-    height: 90%;
+    height: 80%;
 }
 #p1, #p2{
     width: 20px;
     height: 100px;
     fill: white;
+}
+#g1, #g2{
+    width: 10px;
+    height: 200px;
+    fill: red;
+}
+#c1,#c2, #line, #mid{
+    font-size: 2em;
+    fill: white;
+}
+#mid{
+    transform: rotateX('90');
 }
 footer{
     font-family: Arial, Helvetica, sans-serif;

@@ -1,16 +1,10 @@
-function movePlayerP1(){
+function movePlayer(){
     document.addEventListener("keydown",(e) => {
-        console.log(e.key)
         if(e.key == "s"){
             toMove("p1",10);
         }else if(e.key == "w"){
             toMove("p1",-10);
         }
-    })
-}
-function movePlayerP2(){
-    document.addEventListener("keydown",(e) => {
-        console.log(e.key)
         if(e.key == "ArrowDown"){
             toMove("p2",10);
         }else if(e.key == "ArrowUp"){
