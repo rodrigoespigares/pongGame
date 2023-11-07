@@ -11,6 +11,12 @@ function config(){
         g1: document.getElementById("g1"),
         g2: document.getElementById("g2"),
     }
+    ballConfig={
+        velY : 1,
+        velX : 3,
+        px : 50,
+        py : 50,
+    }
     game.c1.setAttribute("x", (game.svg.clientWidth/2)-70)
     game.c2.setAttribute("x", (game.svg.clientWidth/2)+70)
     game.line.setAttribute("x", (game.svg.clientWidth/2))
@@ -23,10 +29,4 @@ function config(){
     game.g2.setAttribute("x", (game.svg.clientWidth)-10);
     game.ball.setAttribute("cy", (game.svg.clientHeight/2.5));
     game.ball.setAttribute("cx", (game.svg.clientWidth/2));
-    ballConfig={
-        velY : 1,
-        velX : 3,
-        px : 50,
-        py : 50,
-    }
 }
