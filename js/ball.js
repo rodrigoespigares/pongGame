@@ -44,7 +44,7 @@ function point(){
         parseInt(game.ball.getAttribute("cy")) <= (parseInt(game.g1.getAttribute("y"))+300)
     ) 
     {
-        let counter = parseInt(game.c1.textContent);
+        let counter = parseInt(game.c2.textContent);
         if (counter === 0) {
             counter = 1
         }
