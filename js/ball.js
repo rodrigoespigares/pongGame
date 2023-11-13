@@ -23,12 +23,14 @@ function reloadPos() {
 }
 function colision(){
     if((parseInt(game.ball.getAttribute("cx"))-game.radio) <= parseInt(game.player1.getAttribute("x")) + 20 && 
+        (parseInt(game.ball.getAttribute("cx"))+game.radio) >= parseInt(game.player1.getAttribute("x")) && 
         parseInt(game.ball.getAttribute("cy"))>= parseInt(game.player1.getAttribute("y"))                   && 
         parseInt(game.ball.getAttribute("cy"))<= (parseInt(game.player1.getAttribute("y"))+100) )
     {
         ballConfig.velX = -1 * ballConfig.velX;
     }
-    if((parseInt(game.ball.getAttribute("cx"))+game.radio) >= parseInt(game.player2.getAttribute("x"))      && 
+    if((parseInt(game.ball.getAttribute("cx"))-game.radio) <= parseInt(game.player2.getAttribute("x"))+20    && 
+        (parseInt(game.ball.getAttribute("cx"))+game.radio) >= parseInt(game.player2.getAttribute("x"))      && 
         parseInt(game.ball.getAttribute("cy")) >= parseInt(game.player2.getAttribute("y"))                   && 
         parseInt(game.ball.getAttribute("cy")) <= (parseInt(game.player2.getAttribute("y"))+100) )
     {
