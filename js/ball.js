@@ -44,19 +44,13 @@ function point(){
         parseInt(game.ball.getAttribute("cy")) <= (parseInt(game.g1.getAttribute("y"))+300)
     ) 
     {
-        config();
-        let counter = parseInt(game.c2.textContent);
-        if(counter<5){
-            counter++;
-            game.c2.innerHTML = counter;
-        }else{
-            win("PLAYER 2");
-            ballConfig.velX=0;
-            ballConfig.velY=0;
-            game.c2.innerHTML = 0;
-            game.c1.innerHTML = 0;
+        let counter = parseInt(game.c1.textContent);
+        if (counter === 0) {
+            counter = 1
         }
-        
+        config();
+        marker(false); 
+        ballConfig.velX = counter;
     }
     if (
         ((parseInt(game.ball.getAttribute("cx")) + game.radio) >= parseInt(game.g2.getAttribute("x"))) &&
@@ -64,18 +58,29 @@ function point(){
         parseInt(game.ball.getAttribute("cy")) <= (parseInt(game.g2.getAttribute("y"))+300)
     ) 
     {
-        config();
         let counter = parseInt(game.c1.textContent);
-        if(counter<5){
-            counter++;
-            game.c1.innerHTML = counter;
-        }else{
-            win("PLAYER 1");
-            ballConfig.velX=0;
-            ballConfig.velY=0;
-            game.c2.innerHTML = 0;
-            game.c1.innerHTML = 0;
+        if (counter === 0) {
+            counter = 1
         }
-        
+        config();
+        marker(true);  
+        ballConfig.velX = counter;
+        ballConfig.velX = -1 * ballConfig.velX;    
     }
+}
+function marker(boolean) {
+    selecter = boolean ? game.c1 : game.c2;
+    other = !boolean ? game.c1 : game.c2;
+
+    let counter = parseInt(selecter.textContent);
+    if(counter<5){
+        counter++;
+        selecter.innerHTML = counter;
+    }else{
+        win((selecter == game.c1)?"PLAYER 1":"PLAYER 2");
+        ballConfig.velX=0;
+        ballConfig.velY=0;
+        other.innerHTML = 0;
+        selecter.innerHTML = 0;
+    }  
 }
